@@ -1,9 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+$font_perso: 'Bangers', cursive;
+
 body {
     background-color: #333;
     color: white;
 }
 
 h1 {
+    font-family: $font_perso;
+    letter-spacing: 2px;
     margin: 20px auto;
     margin-bottom: 60px;
     text-align: center;
@@ -13,24 +21,124 @@ a {
     color: white;
     text-decoration: none;
     cursor: pointer;
-}
-
-p {
     color: white;
     text-align: center;
     transform: scale(1,1);
     transition: all 0.3s;
 }
 
-p:hover {
+a:hover {
     color: aquamarine;
-    transform: scale(1.2,1.2);
-    // transform: scaleY(1.2);
+    box-shadow: 1px 2px 5px #000;
+    transform: scale(1.1,1.1);
 }
 
-.row {
+.accueil {
 
-    img {
-        height: 200px;
+    a {
+        p {
+            width: 200px;
+            margin: 0px auto;
+            color: white;
+            text-align: center;
+            transform: scale(1,1);
+            transition: all 0.3s;
+        }
+
+        p:hover {
+            color: aquamarine;
+            transform: scale(1.2,1.2);
+        }
+    }
+
+    .row {
+        .col {
+            background-color: #222;
+            padding: 15px 0px;
+            text-align: center;
+        }
+    }
+}
+
+.films {
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .col-4 {
+            background-color: #222;
+            padding-top: 10px;
+            text-align: center;
+            min-width: 125px;
+            height: 200px;
+
+            img {
+                height: 130px;
+            }
+
+            p {
+                font-size: 12px;
+                margin-top: 8px;
+            }
+        }
+
+        // .col-sm-3 {
+
+        //     img {
+        //         height: 150px;
+        //     }
+        // }
+    }
+}
+
+.show {
+    padding-bottom: 40px;
+
+    .row {
+        h1 {
+            background-color: #222;
+            margin: 30px auto 60px auto;
+            padding: 10px;
+        }
+    }
+
+    .section-bas-film {
+        display: flex;
+        align-items: top;
+        justify-content: center;
+        margin: 0px auto;
+
+        .col {
+            img {
+                display: block;
+                margin: 0px auto;
+                height: 400px;
+            }
+
+            .description {
+                width: 80%;
+            }
+
+            .ligne {
+                background-color: #555;
+                height: 1px;
+                margin: 20px 0px;
+                width: 200px;
+            }
+
+            span {
+                color: aquamarine;
+                font-size: 12px;
+                font-family: $font_perso;
+                letter-spacing: 1px;
+            }
+
+            h4 {
+                color: #aaa;
+                font-size: 12px;
+            }
+        }
     }
 }

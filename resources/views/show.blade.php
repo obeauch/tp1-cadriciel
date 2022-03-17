@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Films</title>
-</head>
-<body>
+<x-layout>
+
+    <x-slot name="titre">
+        Un films | TP1 - Films
+    </x-slot>
+
     <main>
-        <div class="container py-5">
+        <div class="container-fluid show">
             <a href="/films/">Retour aux films
             </a>
+
             <div class="row">
                 <h1>{{ $film->title }}</h1>
-                <p>Date de sortie: {{ $film->release_date }}</p>
-                <p>Description: {{ $film->overview }}</p>
-                <p>Appréciation moyenne: {{ $film->vote_average }}</p>
-                <p>Nombres de votes: {{ $film->vote_count }}</p>
-                <img src="{{ $film->poster_path }}" alt="">
+            </div>
+            <div class="row section-bas-film">
+                <div class="col">
+                    <img src="{{ $film->poster_path }}" class="mb-5">
+                </div>
+                <div class="col">
+
+                    <p class="description mb-5">{{ $film->overview }}</p>
+                    <h4 class="date-sortie">Date de sortie :  <span>{{ $film->release_date }}</span></h4>
+                    <div class="ligne"></div>
+                    <h4 class="appreciation">Appréciation moyenne :  <span>{{ $film->vote_average }}</span></h4>
+                    <h4 class="votes">Nombres de votes :  <span>{{ $film->vote_count }}</span></h4>
+                </div>
             </div>
         </div>
     </main>
 
-</body>
-</html>
+</x-layout>
+

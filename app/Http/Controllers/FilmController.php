@@ -37,4 +37,22 @@ class FilmController extends Controller
                         "film" => $resultat[0],
                     ]);
     }
+
+    public function rechercher($recherche) {
+        $films = [
+        ];
+
+        $resultat = [];
+        foreach($films as $film) {
+            if(str_contains(strtolower($film), $recherche)){
+                $resultat[] = $film;
+
+                return view('films', [
+                    'films' => $resultat,
+                ]);
+            }
+        }
+
+        return response()->json(false);
+    }
 }
