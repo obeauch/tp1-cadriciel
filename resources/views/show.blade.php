@@ -4,21 +4,31 @@
         Un films | TP1 - Films
     </x-slot>
 
+    <header class="justify-content-center">
+        <nav class="row fixed-top">
+            <div class="col bouton-retour">
+                <a href="/films/">
+                    Retour aux films
+                </a>
+            </div>
+            <div class="col form-recherche">
+            </div>
+        </nav>
+    </header>
+
     <main>
         <div class="container-fluid show">
-            <a href="/films/">Retour aux films
-            </a>
 
-            <div class="row">
+            <div class="row titre-film justify-content-center">
                 <h1>{{ $film->title }}</h1>
             </div>
             <div class="row section-bas-film">
-                <div class="col">
+                <div class="col image">
                     <img src="{{ $film->poster_path }}" class="mb-5">
                 </div>
-                <div class="col">
+                <div class="col description">
 
-                    <p class="description mb-5">{{ $film->overview }}</p>
+                    <p class="texte mb-5">{{ $film->overview }}</p>
                     <h4 class="date-sortie">Date de sortie :  <span>{{ $film->release_date }}</span></h4>
                     <div class="ligne"></div>
                     <h4 class="appreciation">Appréciation moyenne :  <span>{{ $film->vote_average }}</span></h4>

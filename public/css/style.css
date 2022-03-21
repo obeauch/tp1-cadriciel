@@ -1,26 +1,14 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
   background-color: #333;
   color: white;
-}
-
-h1 {
-  font-family: "Bangers", cursive;
-  letter-spacing: 2px;
-  margin: 20px auto;
-  margin-bottom: 60px;
-  text-align: center;
+  margin: 0px;
 }
 
 a {
+  font-size: 15px;
   color: white;
   text-decoration: none;
   cursor: pointer;
-  color: white;
   text-align: center;
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
@@ -30,72 +18,87 @@ a {
 
 a:hover {
   color: aquamarine;
-  -webkit-box-shadow: 1px 2px 5px #000;
-          box-shadow: 1px 2px 5px #000;
+  font-size: 16.5px;
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
 }
 
-.accueil a p {
-  width: 200px;
-  margin: 0px auto;
-  color: white;
+header nav {
+  background-color: #333;
+  height: 60px;
+}
+
+header nav .bouton-retour, header nav .form-recherche {
   text-align: center;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  margin: 10px;
+  padding: 5px;
 }
 
-.accueil a p:hover {
-  color: aquamarine;
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-.accueil .row .col {
+header nav input {
   background-color: #222;
-  padding: 15px 0px;
+  border: none;
+  color: aquamarine;
+  font-size: 12px;
+  padding: 5px;
+}
+
+header .titre {
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  margin: 70px auto 30px auto;
   text-align: center;
 }
 
-.films .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.accueil .ligne-sombre .boutons {
+  background-color: #222;
+  padding-top: 15px;
+  height: 60px;
+  text-align: center;
 }
 
-.films .row .col-4 {
+.films .tous-films a:hover {
+  -webkit-box-shadow: 1px 2px 5px #000;
+          box-shadow: 1px 2px 5px #000;
+}
+
+.films .tous-films .col-boch {
   background-color: #222;
   padding-top: 10px;
   text-align: center;
   min-width: 125px;
+  max-width: 175px;
   height: 200px;
 }
 
-.films .row .col-4 img {
+.films .tous-films .col-boch img {
   height: 130px;
 }
 
-.films .row .col-4 p {
+.films .tous-films .col-boch p {
   font-size: 12px;
   margin-top: 8px;
 }
 
+.films .tous-films h3 {
+  text-align: center;
+}
+
 .show {
+  padding: 0px;
   padding-bottom: 40px;
 }
 
-.show .row h1 {
+.show .titre-film {
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  margin: 70px auto 30px auto;
+  text-align: center;
+}
+
+.show .titre-film h1 {
   background-color: #222;
-  margin: 30px auto 60px auto;
   padding: 10px;
+  text-align: center;
 }
 
 .show .section-bas-film {
@@ -111,31 +114,31 @@ a:hover {
   margin: 0px auto;
 }
 
-.show .section-bas-film .col img {
+.show .section-bas-film .image img {
   display: block;
   margin: 0px auto;
   height: 400px;
 }
 
-.show .section-bas-film .col .description {
+.show .section-bas-film .description .texte {
   width: 80%;
 }
 
-.show .section-bas-film .col .ligne {
+.show .section-bas-film .description .ligne {
   background-color: #555;
   height: 1px;
   margin: 20px 0px;
   width: 200px;
 }
 
-.show .section-bas-film .col span {
+.show .section-bas-film .description span {
   color: aquamarine;
   font-size: 12px;
   font-family: "Bangers", cursive;
   letter-spacing: 1px;
 }
 
-.show .section-bas-film .col h4 {
+.show .section-bas-film .description h4 {
   color: #aaa;
   font-size: 12px;
 }

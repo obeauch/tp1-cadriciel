@@ -13,6 +13,7 @@ class FilmController extends Controller
      */
     public function films() {
         $films = DB::table('films')
+                    ->orderBy('title', 'asc')
                     ->get();
 
         return view('films', [
@@ -30,7 +31,6 @@ class FilmController extends Controller
                         ->where('id', '=', $id)
                         ->get();
 
-        // dd($resultat);
         return count($resultat) == 0 ?
                     abort(404) :
                     view('show', [
@@ -38,21 +38,34 @@ class FilmController extends Controller
                     ]);
     }
 
-    public function rechercher($recherche) {
-        $films = [
-        ];
+    /**
+     * Méthode qui permet de faire une recherche en fonction d'un paramètre.
+     * Si les lettres écritent sont incluses (like)
+     * peut-importe où dans le titre (%...%), on affiche les films correspondants
+     */
+    public function rechercher() {
 
-        $resultat = [];
-        foreach($films as $film) {
-            if(str_contains(strtolower($film), $recherche)){
-                $resultat[] = $film;
+        $recherche = request()->recherche;
 
-                return view('films', [
-                    'films' => $resultat,
-                ]);
-            }
+        $films =  DB::table('films')
+                        ->where('title', 'like', '%'.$recherche.'%')
+                        ->get();
+
+
+        $vide = "Aucun film trouvé !";
+
+        if(count($films) == 0) {
+            //Retourne la vue chercher chercher, mais avec variable $vide
+            return view('chercher', [
+                'vide' => $vide,
+                'films' => $films,
+            ]);
+        } else {
+            //Retourne la vue chercher avec avec variable $films
+            return view('chercher', [
+                'films' => $films,
+            ]);
         }
 
-        return response()->json(false);
     }
 }

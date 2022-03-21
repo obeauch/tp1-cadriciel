@@ -4,18 +4,25 @@
         Accueil | TP1 - Films
     </x-slot>
 
-    <h1>Accueil</h1>
+    <header class="justify-content-center">
+
+        <div class="row titre">
+            <h1>Accueil</h1>
+        </div>
+    </header>
+
 
     <div class="container-fluid accueil">
-        <div class="row">
-            <div class="col">
+        {{-- @dd($film->poster_path) --}}
+        <div class="row ligne-sombre">
+            <div class="col boutons">
                 <a href="/init/">
-                    <p>Réinitialisation de la bdd</p>
+                    Réinitialisation de la bdd
                 </a>
             </div>
-            <div class="col">
+            <div class="col boutons">
                 <a href="/films/">
-                    <p>Page de films</p>
+                    Page de films
                 </a>
             </div>
         </div>
