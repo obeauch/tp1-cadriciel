@@ -17,26 +17,25 @@
             </div>
 
         </nav>
-        <div class="row titre">
+        <div class="row titre2">
             <h1>Liste de tous les films</h1>
         </div>
     </header>
 
-    <main>
-        <div class="container-fluid films">
+    <main class="container-fluid films">
 
-            <div class="row tous-films justify-content-center">
+        <div class="row tous-films justify-content-center">
 
-                @foreach($films as $film)
-                    <a href="/films/{{ $film->id }}" class="col-boch col-4 col-sm-3 col-md-2 m-2" >
-                        <img src="{{ $film->poster_path }}" alt="">
-                        <p>{{ $film->title }}</p>
-                    </a>
-                @endforeach
+            @foreach($films as $film)
+                <a href="/films/{{ $film->id }}" class="col-boch col-4 col-sm-3 col-md-2 m-2" >
+                    <img src="{{ $film->poster_path }}" alt="">
+                    <p>{{ $film->title }}</p>
+                </a>
+            @endforeach
 
-            </div>
         </div>
     </main>
+
 
 </x-layout>
 

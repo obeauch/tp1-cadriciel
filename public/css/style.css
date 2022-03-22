@@ -25,7 +25,6 @@ a:hover {
 
 header nav {
   background-color: #333;
-  height: 60px;
 }
 
 header nav .bouton-retour, header nav .form-recherche {
@@ -43,10 +42,32 @@ header nav input {
 }
 
 header .titre {
+  position: absolute;
+  top: 60px;
+  left: 0px;
   font-family: "Bangers", cursive;
   letter-spacing: 2px;
-  margin: 70px auto 30px auto;
+  margin: 0px auto;
   text-align: center;
+  width: 100%;
+}
+
+.titre2 {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  margin: 0px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.accueil {
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  height: 100px;
 }
 
 .accueil .ligne-sombre .boutons {
@@ -54,6 +75,27 @@ header .titre {
   padding-top: 15px;
   height: 60px;
   text-align: center;
+}
+
+.fond {
+  background-image: url("https://image.tmdb.org/t/p/w500/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  position: absolute;
+  opacity: 0.1;
+  width: 100%;
+  height: 100vh;
+}
+
+.films {
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  height: 100px;
 }
 
 .films .tous-films a:hover {
@@ -114,14 +156,18 @@ header .titre {
   margin: 0px auto;
 }
 
+.show .section-bas-film .image {
+  max-height: 360px;
+}
+
 .show .section-bas-film .image img {
+  height: 100%;
   display: block;
   margin: 0px auto;
-  height: 400px;
 }
 
 .show .section-bas-film .description .texte {
-  width: 80%;
+  width: 90%;
 }
 
 .show .section-bas-film .description .ligne {

@@ -27,6 +27,9 @@ class InitController extends Controller
             if(!$res) break;
         }
 
-        return ["succes" => $res];
+        return view('index', [
+            "succes" => $res,
+        ]);
+
     }
 }

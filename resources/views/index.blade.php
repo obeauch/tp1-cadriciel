@@ -11,9 +11,9 @@
         </div>
     </header>
 
+    <div class="fond"></div>
 
     <div class="container-fluid accueil">
-        {{-- @dd($film->poster_path) --}}
         <div class="row ligne-sombre">
             <div class="col boutons">
                 <a href="/init/">
@@ -27,5 +27,7 @@
             </div>
         </div>
     </div>
+
+
 
 </x-layout>

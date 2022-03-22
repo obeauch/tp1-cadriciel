@@ -14,24 +14,22 @@
             </div>
 
         </nav>
-        <div class="row titre">
+        <div class="row titre2">
             <h1>Liste des films selon votre recherche</h1>
         </div>
     </header>
 
-    <main>
-        <div class="container-fluid films">
-            <div class="row tous-films justify-content-center">
-                @forelse($films as $film)
-                    <a href="/films/{{ $film->id }}" class="col-boch col-4 col-sm-3 col-md-2 m-2" >
-                        <img src="{{ $film->poster_path }}" alt="">
-                        <p>{{ $film->title }}</p>
-                    </a>
-                @empty
-                    <h3>{{ $vide }}</h3>
-                @endforelse
+    <main class="container-fluid films">
+        <div class="row tous-films justify-content-center">
+            @forelse($films as $film)
+                <a href="/films/{{ $film->id }}" class="col-boch col-4 col-sm-3 col-md-2 m-2" >
+                    <img src="{{ $film->poster_path }}" alt="">
+                    <p>{{ $film->title }}</p>
+                </a>
+            @empty
+                <h3>{{ $vide }}</h3>
+            @endforelse
 
-            </div>
         </div>
     </main>
 

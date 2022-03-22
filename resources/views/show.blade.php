@@ -23,10 +23,10 @@
                 <h1>{{ $film->title }}</h1>
             </div>
             <div class="row section-bas-film">
-                <div class="col image">
-                    <img src="{{ $film->poster_path }}" class="mb-5">
+                <div class="col image pb-4">
+                    <img src="{{ $film->poster_path }}">
                 </div>
-                <div class="col description">
+                <div class="col description mx-5">
 
                     <p class="texte mb-5">{{ $film->overview }}</p>
                     <h4 class="date-sortie">Date de sortie :  <span>{{ $film->release_date }}</span></h4>
