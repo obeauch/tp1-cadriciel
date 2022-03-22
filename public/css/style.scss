@@ -29,13 +29,11 @@ header {
 
     nav {
         background-color: #333;
-        // height: 10px;
 
         .bouton-retour,.form-recherche {
             text-align: center;
             margin: 10px;
             padding: 5px;
-
         }
 
         input {
@@ -46,20 +44,10 @@ header {
             padding: 5px;
         }
     }
-
-    .titre {
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        font-family: $font_perso;
-        letter-spacing: 2px;
-        margin: 0px auto;
-        text-align: center;
-        width: 100%;
-    }
 }
 
-.titre2 {
+//Titre sur chaque page (sauf page show(un seul film))
+.titre {
     position: absolute;
     top: 60px;
     left: 0px;
@@ -70,7 +58,7 @@ header {
     width: 100%;
 }
 
-
+//Container de la page d'accueil
 .accueil {
 
     position: absolute;
@@ -88,6 +76,8 @@ header {
         }
     }
 }
+
+//Fond de la page d'accueil
 .fond {
     background-image: url('https://image.tmdb.org/t/p/w500/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg');
     background-repeat: no-repeat;
@@ -101,6 +91,7 @@ header {
     height: 100vh;
 }
 
+//Container de la page de tous les films
 .films {
     position: absolute;
     top: 160px;
@@ -137,6 +128,7 @@ header {
     }
 }
 
+//Container de la page d'un seul film
 .show {
     padding: 0px;
     padding-bottom: 40px;

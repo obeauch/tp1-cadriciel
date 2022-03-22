@@ -21,7 +21,9 @@ Route::get('/', function () {
 
 Route::get('/init', [InitController::class, 'index']);
 Route::get('/films', [FilmController::class, 'films']);
-Route::get('/films/chercher/', [FilmController::class, 'rechercher']);
+
+// ordre entre films/chercher et films/{id} important pour ne pas créer de conflit
+Route::get('/films/chercher', [FilmController::class, 'rechercher']);
 Route::get('/films/{id}', [FilmController::class, 'show']);
 
 

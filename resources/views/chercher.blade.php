@@ -14,7 +14,7 @@
             </div>
 
         </nav>
-        <div class="row titre2">
+        <div class="row titre">
             <h1>Liste des films selon votre recherche</h1>
         </div>
     </header>

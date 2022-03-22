@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 class InitController extends Controller
 {
     public function index() {
+
+        //TRUNCATE supprime et refait la bdd à chaque fois que l'on click.
         DB::statement('TRUNCATE films');
 
         $films = file_get_contents(resource_path('films.json'));
@@ -27,6 +29,7 @@ class InitController extends Controller
             if(!$res) break;
         }
 
+        //Retourne vers la page accueil avec succes si tout fonctionne bien.
         return view('index', [
             "succes" => $res,
         ]);

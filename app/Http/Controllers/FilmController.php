@@ -9,7 +9,6 @@ class FilmController extends Controller
 {
     /**
      * Méthode qui retourne tous les films
-     * Faire un Select!!
      */
     public function films() {
         $films = DB::table('films')
@@ -21,7 +20,7 @@ class FilmController extends Controller
         ]);
     }
 
-        /**
+    /**
      * Méthode pour la route /films/{id}
      * Retourne le film correspondant à l'id reçu
      */
@@ -31,6 +30,7 @@ class FilmController extends Controller
                         ->where('id', '=', $id)
                         ->get();
 
+        //Si aucun résultat, retourne page 404, sinon retourne un film avec resultat[id]
         return count($resultat) == 0 ?
                     abort(404) :
                     view('show', [
@@ -39,7 +39,8 @@ class FilmController extends Controller
     }
 
     /**
-     * Méthode qui permet de faire une recherche en fonction d'un paramètre.
+     * Méthode qui permet de faire une recherche en fonction d'un request, car provient
+     * d'un form name="recherche" avec parametre GET.
      * Si les lettres écritent sont incluses (like)
      * peut-importe où dans le titre (%...%), on affiche les films correspondants
      */
@@ -55,7 +56,7 @@ class FilmController extends Controller
         $vide = "Aucun film trouvé !";
 
         if(count($films) == 0) {
-            //Retourne la vue chercher chercher, mais avec variable $vide
+            //Retourne la vue chercher, mais avec variable $vide
             return view('chercher', [
                 'vide' => $vide,
                 'films' => $films,

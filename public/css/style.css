@@ -41,18 +41,7 @@ header nav input {
   padding: 5px;
 }
 
-header .titre {
-  position: absolute;
-  top: 60px;
-  left: 0px;
-  font-family: "Bangers", cursive;
-  letter-spacing: 2px;
-  margin: 0px auto;
-  text-align: center;
-  width: 100%;
-}
-
-.titre2 {
+.titre {
   position: absolute;
   top: 60px;
   left: 0px;

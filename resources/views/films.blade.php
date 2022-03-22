@@ -10,6 +10,7 @@
                     Retour à l'accueil
                 </a>
             </div>
+
             <div class="col form-recherche">
                 <form action="/films/chercher" method="GET">
                     <input type="text" name="recherche" placeholder="Recherchez un film">
@@ -17,7 +18,7 @@
             </div>
 
         </nav>
-        <div class="row titre2">
+        <div class="row titre">
             <h1>Liste de tous les films</h1>
         </div>
     </header>
